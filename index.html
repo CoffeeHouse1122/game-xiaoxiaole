@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>超简易消消乐(无道具)</title>
+  <!-- rem -->
+  <script>
+    (function (win, doc) {
+      if (!win.addEventListener) return;
+      var html = document.documentElement;
+      function setFont() {
+        var html = document.documentElement;
+        var k = 750;
+        html.style.fontSize = (html.clientWidth / k * 100 > 100 ? 100 : html.clientWidth / k * 100) + "px";
+      }
+      setFont();
+      setTimeout(function () {
+        setFont();
+      }, 300);
+      doc.addEventListener('DOMContentLoaded', setFont, false);
+      win.addEventListener('resize', setFont, false);
+      win.addEventListener('load', setFont, false);
+    })(window, document);
+  </script>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>超简易消消乐(无道具版)</h1>
+    <section id="gameSection"></section>
+    <div class="infoBox">
+      <p class="timeInfo">倒计时: <span class="time">60</span></p>
+      <p class="curScoreInfo">得分: <span class="curScore">0</span></p>
+      <p class="start startAni">开始</p>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

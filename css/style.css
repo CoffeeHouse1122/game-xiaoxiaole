@@ -1,0 +1,124 @@
+.wrap {
+  width: 7.5rem;
+  height: 100%;
+  background-color: aliceblue;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0.2rem auto 0;
+  color: blueviolet;
+  text-shadow: 1px 1px 5px #555;
+  text-align: center;
+  font-size: 30px;
+}
+
+#gameSection {
+  width: 7rem;
+  height: 7rem;
+  margin: 0.3rem auto;
+  box-shadow: 1px 1px 5px #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  transform: scale(0.95);
+  border: 1px solid #9E9E9E;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-size: 10rem 1rem;
+  background-position: 0 0;
+  text-align: center;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.itemT0 {
+  background-image: url(../images/tile_0.png);
+}
+
+.itemT1 {
+  background-image: url(../images/tile_1.png);
+}
+
+.itemT2 {
+  background-image: url(../images/tile_2.png);
+}
+
+.itemT3 {
+  background-image: url(../images/tile_3.png);
+}
+
+.itemT4 {
+  background-image: url(../images/tile_4.png);
+}
+
+.itemT5 {
+  background-image: url(../images/tile_5.png);
+}
+
+.itemAni {
+  animation: itemAni 0.8s steps(9, end) infinite;
+}
+
+@keyframes itemAni {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: -100%;
+  }
+}
+
+.infoBox {
+  margin: 0 auto;
+  width: 90%;
+  height: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeInfo,
+.curScoreInfo,
+.start {
+  width: 33.3%;
+  height: 0.5rem;
+  font-size: 0.3rem;
+  color: brown;
+  text-align: left;
+}
+
+.start {
+  line-height: 0.5rem;
+  font-size: 0.24rem;
+  color: #fff;
+  background-color: brown;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 5px #555;
+  box-shadow: 1px 1px 5px #555;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.startAni {
+  animation: startAni 0.6s ease infinite;
+}
+
+@keyframes startAni {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
